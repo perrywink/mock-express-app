@@ -1,12 +1,20 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const cyberchief_bolt = require("cyberchief-bolt").initExpress;
+
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(
+  cyberchief_bolt(
+      {
+          key: "bolt.1H01YE9KCk/sX0P8y6MMROagOTawi3WsA566kLOV",
+          host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+      })); 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
