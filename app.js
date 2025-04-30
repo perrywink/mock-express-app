@@ -18,6 +18,14 @@ const PORT = process.env.PORT || 3000;
 
 const APP_DOMAIN = process.env.APP_DOMAIN || 'your-application-domain.com';
 
+// Add middleware to normalize the hostname
+app.use((req, res, next) => {
+  // Force the hostname to be your domain name for all requests
+  req.headers.host = APP_DOMAIN;
+  next();
+});
+
+
 app.use(
   metlo(
     {
@@ -26,13 +34,6 @@ app.use(
     }
   )
 );
-
-// Add middleware to normalize the hostname
-app.use((req, res, next) => {
-  // Force the hostname to be your domain name for all requests
-  req.headers.host = APP_DOMAIN;
-  next();
-});
 
 app.use(cors());
 app.use(bodyParser.json());
