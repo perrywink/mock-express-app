@@ -10,8 +10,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cyberchief_bolt({
-    key: "bolt.1H01YE9KCk/sX0P8y6MMROagOTawi3WsA566kLOV",
-    host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+    // key: "bolt.1H01YE9KCk/sX0P8y6MMROagOTawi3WsA566kLOV",
+    // host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+    key: "metlo.53mcBbUTPTzklhFDJnIlkVoTC76pRYzrg8mX5E7w",
+    host: "https://app.metlo.com:8081",
   })
 );
 
