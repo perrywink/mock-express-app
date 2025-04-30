@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metlo-test-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: metlo-test-api
+  template:
+    metadata:
+      labels:
+        app: metlo-test-api
+    spec:
+      containers:
+      - name: metlo-test-api
+        image: gcr.io/thermal-setup-458400-b9/metlo-test-api:v1
+        ports:
+        - containerPort: 3000
+        env:
+        - name: PORT
+          value: "3000"
+        - name: NODE_ENV
+          value: "production"
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: metlo-test-api-service
+spec:
+  selector:
+    app: metlo-test-api
+  ports:
+  - port: 80
+    targetPort: 3000
+  type: LoadBalancer
