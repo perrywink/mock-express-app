@@ -1,39 +1,29 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-// const cyberchief_bolt = require("cyberchief-bolt").initExpress;
-const metlo = require("metlo").initExpress;
+const cyberchief_bolt = require("cyberchief-bolt").initExpress;
+// const metlo = require("metlo").initExpress;
 
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// app.use(
-//   cyberchief_bolt({
-//     key: "bolt.1H01YE9KCk/sX0P8y6MMROagOTawi3WsA566kLOV",
-//     host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
-//   })
-// );
-
-const APP_DOMAIN = process.env.APP_DOMAIN || 'your-application-domain.com';
-
-// Add middleware to normalize the hostname
-app.use((req, res, next) => {
-  // Force the hostname to be your domain name for all requests
-  req.headers.host = APP_DOMAIN;
-  next();
-});
-
-
 app.use(
-  metlo(
-    {
-      key: "metlo.53mcBbUTPTzklhFDJnIlkVoTC76pRYzrg8mX5E7w",
-      host: "https://app.metlo.com:8081",
-    }
-  )
+  cyberchief_bolt({
+    key: "bolt.hbx4WAyf5FYNwBTnsDZsuLpIBKIlqLCN4jmDoqyT",
+    host: "https://bolt.cyberchief.ai",
+  })
 );
+
+// app.use(
+//   metlo(
+//     {
+//       key: "metlo.53mcBbUTPTzklhFDJnIlkVoTC76pRYzrg8mX5E7w",
+//       host: "https://app.metlo.com:8081",
+//     }
+//   )
+// );
 
 app.use(cors());
 app.use(bodyParser.json());
