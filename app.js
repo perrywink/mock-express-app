@@ -10,11 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(
-  cyberchief_bolt({
-    key: "bolt.++m4vfA8sn/yBm128KFSPaylHRnrydYLoyVN6hHa",
-    host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
-  })
-);
+  cyberchief_bolt(
+      {
+          key: "bolt.2szz920IOcZp8lzXkYxKtB6TQZjkNJnPHKuJb2qf",
+          host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+      })); 
 
 // app.use(
 //   metlo(
