@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cyberchief_bolt({
-    key: "bolt.hbx4WAyf5FYNwBTnsDZsuLpIBKIlqLCN4jmDoqyT",
-    host: "https://bolt.cyberchief.ai",
+    key: "bolt.++m4vfA8sn/yBm128KFSPaylHRnrydYLoyVN6hHa",
+    host: "https://127.0.0.1:8080",
   })
 );
 
