@@ -7,12 +7,19 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// app.use(
+//   cyberchief_bolt(
+//     {
+//         key: "bolt.i3SMnhMJIMIw43A5nd72KxcpIbYBCIeVk2OZb08j",
+//         host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+//     })); 
+
 app.use(
   cyberchief_bolt(
-    {
-        key: "bolt.i3SMnhMJIMIw43A5nd72KxcpIbYBCIeVk2OZb08j",
-        host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
-    })); 
+      {
+          key: "bolt.Z2/PoHb79Qa/+L2gdPrrarLhixi+bb7JCGSNBIOj",
+          host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+      })); 
 
 app.use(cors());
 app.use(express.json());
