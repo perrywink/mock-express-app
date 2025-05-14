@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_URL="https://mock-express-app-production.up.railway.app"
+BASE_URL="https://mock-express-app-staging.up.railway.app"
 
 echo "🔁 Hitting root endpoint..."
 curl -s -X GET "$BASE_URL/" | jq
