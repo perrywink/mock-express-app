@@ -14,19 +14,19 @@ const PORT = process.env.PORT || 3000;
 //         host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
 //     }));
 
-// app.use(
-//   cyberchief_bolt(
-//       {
-//           key: "bolt.C3+W2pNvxHtu3Xfb8te9I8MndScs+yEcAlCnxlBR",
-//           host: "http://localhost:8081",
-//       }));
-
 app.use(
   cyberchief_bolt(
       {
-          key: "bolt.zyGepyMMa/Z71eR/4jScahhdYD48Y9+j8yCA3v1d",
-          host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+          key: "bolt./osVHFZWvYLHsN1gkYoOWkOAQd1WhMZRoq1kN/mR",
+          host: "http://localhost:8081",
       })); 
+
+// app.use(
+//   cyberchief_bolt(
+//       {
+//           key: "bolt.zyGepyMMa/Z71eR/4jScahhdYD48Y9+j8yCA3v1d",
+//           host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+//       })); 
 
 app.use(cors());
 app.use(express.json());
