@@ -8,11 +8,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(
-  cyberchief_bolt({
-    key: "bolt.F7HsKds1i3ZOzjytxvN9iPHQw58e6P/HGcdNEEYz",
-    host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
-  })
-);
+  cyberchief_bolt(
+      {
+          key: "bolt.WHIqMyvycNMO6SKWIQ8YdBtWfu5HTM8PqRYxPwAu",
+          host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+      })); 
 
 app.use(cors());
 app.use(express.json());
