@@ -70,7 +70,7 @@ app.delete("/api/users/:id", (req, res) => {
 
 // ========== Products ==========
 app.get("/api/products", (req, res) => {
-  res.json([{ id: 1, name: "Sample Product", price: 19.99 }]);
+  res.json([{ id: 1, name: "Some Product", price: 19.99 }]);
 });
 
 app.get("/api/products/:id", (req, res) => {
