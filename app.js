@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.use(
   cyberchief_bolt(
       {
-          key: "bolt.oiHgPjX5RNPII3ZeYQr9Z9H6OXU+cmL1DQNyvaLI",
+          key: "bolt.aN+oVnRq69MPra+Itswb0bQcLqbCD1WYrxE5017c",
           host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
       })); 
 
