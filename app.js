@@ -15,11 +15,11 @@ const PORT = process.env.PORT || 3000;
 //       })); 
 
 app.use(
-  cyberchief_bolt(
-      {
-          key: "bolt.r3up13vbN2toN5gE+ZOckPLs+1ojFivCRyZ6RyBQ",
-          host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
-      })); 
+    cyberchief_bolt(
+        {
+            key: "bolt.UVchshN0s3u98Ko7DMo2po/86uNfaKEpNzfh106I",
+            host: "http://bolt-staging-719932934.us-east-2.elb.amazonaws.com:8081",
+        })); 
 
 app.use(cors());
 app.use(express.json());
